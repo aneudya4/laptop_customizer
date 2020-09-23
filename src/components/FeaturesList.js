@@ -1,7 +1,7 @@
 import React from 'react';
 import FeatureOption from './FeatureOption';
 import FeatureHeader from './FeatureHeader';
-
+import './Features.css';
 export default (props) => {
   const features = Object.keys(props.features).map((feature, idx) => {
     const featureHash = feature + '-' + idx;

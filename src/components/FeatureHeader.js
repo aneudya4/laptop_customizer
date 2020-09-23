@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './FeatureHeader.css';
 const FeatureHeader = ({ feature }) => {
   return (
     <legend className='feature__name'>

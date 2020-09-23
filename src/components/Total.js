@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './Total.css';
 export default ({ selected, USCurrencyFormat }) => {
   const total = Object.keys(selected).reduce(
     (acc, curr) => acc + selected[curr].cost,

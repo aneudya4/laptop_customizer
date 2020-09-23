@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Total from './Total';
+import './Summary.css';
 
 export default class Summary extends Component {
   render() {
