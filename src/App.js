@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
-import FeaturesList from './components/FeaturesList';
+import MainForm from './components/MainForm';
 import Summary from './components/Summary';
 import './App.css';
 
@@ -39,29 +39,20 @@ class App extends Component {
       style: 'currency',
       currency: 'USD',
     });
-
     return (
       <div className='App'>
         <Header />
         <main>
-          <form className='main__form'>
-            <h2>Customize your laptop</h2>
-            <FeaturesList
-              features={this.props.features}
-              USCurrencyFormat={USCurrencyFormat}
-              selected={this.state.selected}
-              updateFeature={this.updateFeature}
-            />
-          </form>
-          <section className='main__summary'>
-            <h2>Your cart</h2>
-            <Summary
-              summary={this.props.summary}
-              features={this.props.features}
-              USCurrencyFormat={USCurrencyFormat}
-              selected={this.state.selected}
-            />
-          </section>
+          <MainForm
+            USCurrencyFormat={USCurrencyFormat}
+            selected={this.state.selected}
+            updateFeature={this.updateFeature}
+          />
+
+          <Summary
+            USCurrencyFormat={USCurrencyFormat}
+            selected={this.state.selected}
+          />
         </main>
       </div>
     );
