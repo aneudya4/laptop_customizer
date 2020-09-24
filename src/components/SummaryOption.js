@@ -1,4 +1,5 @@
 import React from 'react';
+import './SummaryOption.css';
 
 export default (props) => {
   const summary = Object.keys(props.selected).map((feature, idx) => {
